@@ -1,6 +1,6 @@
 Name of organization : IntelliBed
 Link to repository : https://github.com/SEG-IntelliBed/IntelliBed
-Link to Github Pages : https://seg-intellibed.github.io/IntelliBed/
+Link to Github : https://seg-intellibed.github.io/IntelliBed/
 
 Team members : 
 Sihan Wang (Bella-S-W) https://github.com/Bella-S-W
