@@ -3,7 +3,7 @@ Style Guidelines for IntelliBed
 The overall look and feel for IntelliBed will be minimal and relaxing.
 Because our product is designed to promote good sleep, we will keep our design language 
 clean without anything flashy and unnecessary. Our goal is to balance the aesthetic of
-modern technology and natural, healthy lifestyle.
+modern technology with a natural, healthy lifestyle.
 
 Colours:
 =========
