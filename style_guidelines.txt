@@ -1,0 +1,36 @@
+Style Guidelines for IntelliBed 
+================================
+The overall look and feel for IntelliBed will be minimal and relaxing.
+Because our product is designed to promote good sleep, we will keep our design language 
+clean without anything flashy and unnecessary. Our goal is to balance the aesthetic of
+modern technology and natural, healthy lifestyle.
+
+Colours:
+=========
+Like most people, we at IntelliBed associate the night time with colours 
+that are dark and natural. The dark blue accents we use throughout our website and 
+product line reflect the night sky on a cool summer evening. 
+
+These are our colour swatches:
+- #3B58BF
+- #282387
+- #D6BA38
+- #3884D6
+
+Iconography:
+============
+We will focus on using icons that are simple, modern, and relaxing. We will avoid using 
+any icons or images that are distracting and take away from our relaxed style.
+
+Typography:
+===========
+Our main font will be  "BW Quinta Pro Light" by Branding With Type
+
+Links:
+======
+Links will stand out as a different colour and change when the user hovers over it.
+They will not be underlined.
+
+Buttons:
+========
+Buttons will be flat and simple using the colours outlined above. 
