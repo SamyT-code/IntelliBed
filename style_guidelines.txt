@@ -24,7 +24,7 @@ any icons or images that are distracting and take away from our relaxed style.
 
 Typography:
 ===========
-Our main font will be  "BW Quinta Pro Light" by Branding With Type
+Our main font will be "Gidole" - https://gidole.github.io/
 
 Links:
 ======
