@@ -10,6 +10,28 @@
         text-align: center;
         margin-top: 2cm;
       }
+      #right{
+        text-align: right;
+      }  
+      #blockright  {
+        position:relative;
+        left: 1000px;
+        background-color: lightgrey;
+        width: 300px;
+        border: 1px solid black;
+        padding: 50px;
+        margin: 20px;
+      } 
+      #block  {
+        position:relative;
+        left: 100px;
+        background-color: lightgrey;
+        width: 300px;
+        border: 1px solid black;
+        padding: 50px;
+        margin: 20px;
+      }
+      
     </style>
 </head>
 <body>
@@ -24,19 +46,32 @@
         <a href="index.html">Home</a>
     </div>
 
-	<h1>Product Page</h1>
-    <h3>|
+
+	<h1>Our Product</h1>
+    <h2 style = "position:relative; left:50px;">
         King
-    </h3>
-    <p></p>
-    <h3>|
+    </h2>
+    <pre id="block">
+    ---------------------
+    ---------------------
+    ---------------------
+    </pre>
+    <h2 id="right">
         Queen
-    </h3>
-    <p></p>
-    <h3>|
+    </h2>
+    <pre id = "right"><pre id="blockright">
+    ---------------------
+    ---------------------
+    ---------------------
+    </pre></pre>
+    <h2 style = "position:relative; left:50px;">
         Twin
-    </h3>
-    <p></p>
+    </h2>
+    <pre id="block">
+    ---------------------
+    ---------------------
+    ---------------------
+</pre>
 
 </body>
 </html>
