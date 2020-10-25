@@ -1,7 +1,8 @@
 /* Comment */
 
 body {
-    background-color: lightblue;
+    background-color: white;
+    font-family: "Gidole";
 }
 p {
     background-color: white
@@ -10,7 +11,7 @@ p {
 /* The navigation bar */
 .navbar {
     overflow: hidden;
-    background-color: darkblue;
+    background-color: #282387;
     position: fixed; 
     top: 0; 
     left: 0;
@@ -19,7 +20,7 @@ p {
   
   /* Links inside the navbar */
   .navbar a {
-    float: left;
+    float:right;
     display: block;
     color: #f2f2f2;
     text-align: center;
