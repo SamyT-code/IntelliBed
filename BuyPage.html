@@ -10,7 +10,16 @@
         text-align: center;
         margin-top: 2cm;
       }
+
     </style>
+    <script type="text/javascript">
+		function queenSwitch() {
+  			document.getElementById("originalTwin").src="BuyPage/white.jpg";
+  		}
+		function kingSwitch() {
+  			document.getElementById("originalTwin").src="BuyPage/kingwhite.jpg";
+  		}
+    </script>
 </head>
 <body>
 
@@ -26,6 +35,11 @@
 
 	<i><h1>Buy Page</h1></i>
 	<p>Abduljbbar Salkini</p>
+
+	<img id="originalTwin" src="BuyPage/twinwhite.jpg" alt="Twin White Bed Sheets" width="400" height="400">
+	
+	<button id="Queen" onclick="queenSwitch()">Queen Bed</button>
+	<button id="King" onclick="kingSwitch()">King Bed</button>
 
 </body>
 </html>
