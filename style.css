@@ -51,12 +51,7 @@ border-radius: 20px;
   float: left;
   width: 20%;
 }
-#Team.teampage.team_photo img{
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-}
+
 #Team.teampage.descripe{
   float: left;
   width: 80%;
-}
