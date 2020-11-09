@@ -11,12 +11,21 @@ p {
 /* The navigation bar */
 .navbar {
 overflow: hidden;
-background-color: dodgerblue;
+background-color: #003366;
 position: fixed; 
 top: 0; 
 left: 0;
 width: 100%; 
 
+
+}
+
+.logo-image{
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: -6px;
 }
 
 /* Links inside the navbar */
@@ -28,14 +37,14 @@ text-align: center;
 padding: 14px 16px;
 text-decoration: none;
 font-family: "Segoe UI",Arial,sans-serif;
-font-size: larger;
+font-size: medium;
 }
 
 /* Change background on mouse-over */
 .navbar a:hover {
-background: blue;
+background:#001a33;
 /*color: orange; */
-border-radius: 20px;
+
 }
 
 /* Main content */
