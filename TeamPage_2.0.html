@@ -19,14 +19,14 @@ html {
   padding: 0 10px;
 }
 
-
-
 .row {
-    float: top;
-    width: 100%;
-    margin-bottom: 16px;
-    padding: 0 10px;
+  float: top;
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 0 10px;
+  display: inline;
 }
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(59, 3, 3, 0.2);
 }
@@ -35,11 +35,16 @@ html {
   padding: 0 16px;
 }
 
+.container: :after, .row: :after {
+  content: "";
+  clear: both;
+  display: table
+}
+
 
 </style>
 </head>
 <body>
-
 
 <head>
     <meta charset="UTF-8">
@@ -92,7 +97,7 @@ html {
         <img src="TeamPage/Abdulijabbar's.png" alt="Abdulijabbar" style="width:100%">
         <div class="container">
           <p class="title">Student</p>
-          <p>"I was passionate about building something and seeing it work in fascination. Combined with my love for computers, I discovered a passion that led me to this path of software development which quickly became my dream career. Having this passion led me to learn multiple languages such as Java, Python, and JavaScript to an intermediate level.
+          <p>"Combined with my love for computers, I discovered a passion that led me to this path of software development which quickly became my dream career. Having this passion led me to learn multiple languages such as Java, Python, and JavaScript to an intermediate level.
 
             I've always wanted to know what happens at a real job and what tasks do software developers handle, that until I had an internship at LEPTIS Technologies."</p>
           <p>Email:asalk025@uottawa.ca</p>
@@ -112,10 +117,9 @@ html {
             <img src="TeamPage/Samy's.png" alt="Samy Touabi" style="width:100%">
             <div class="container">
               <p class="title">Student</p>
-              <p>"I am a driven and passionate first-year Software Engineering student at the University of Ottawa. Currently, I am working on building a website with a team of 5 from scratch based on a hypothetical product we are pitching.
-
-                I am currently looking for a CO-OP placement for summer 2021 in Software Development.
-                
+              <p>"I am a driven and passionate first-year Software Engineering student at the University of Ottawa. 
+                Currently, I am looking for a CO-OP placement for summer 2021 in Software Development. My proudest achievement to date 
+                was coding a food order app on Visual Basic in grade 12 which the professor displayed as a model for other students to follow.
                 If you are hiring students for Summer 2021 please let me know! "</p>
               <p>Email:stoua026@uottawa.ca</p>
               <h1><a href="https://www.linkedin.com/in/samy-touabi-3013b11ba" target="_blank">Samy Touabi</a></h1>
