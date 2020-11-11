@@ -45,6 +45,12 @@ p {
   border-radius: 20px;
 }
 
+.AppImageContainer img:hover {
+  width: 510.7;
+  height: 1000;
+ 
+}
+
 /* Main content */
 .main {
   margin-top: 30px; /* Add a top margin to avoid content overlay */
