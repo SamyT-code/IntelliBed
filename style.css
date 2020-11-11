@@ -8,18 +8,6 @@ p {
   background-color: white
 }
 
-/* The navigation bar */
-.navbar {
-overflow: hidden;
-background-color: #003366;
-position: fixed; 
-top: 0; 
-left: 0;
-width: 100%; 
-
-
-}
-
 .logo-image{
   width: 46px;
   height: 46px;
@@ -28,23 +16,34 @@ width: 100%;
   margin-top: -6px;
 }
 
+/* The navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: dodgerblue;
+  position: fixed; 
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  
+}
+
 /* Links inside the navbar */
 .navbar a {
-float:right;
-display: block;
-color: #f2f2f2;
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
-font-family: "Segoe UI",Arial,sans-serif;
-font-size: medium;
+  float:right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "Segoe UI",Arial,sans-serif;
+  font-size: larger;
 }
 
 /* Change background on mouse-over */
 .navbar a:hover {
-background:#001a33;
-/*color: orange; */
-
+  background: blue;
+  /*color: orange; */
+  border-radius: 20px;
 }
 
 /* Main content */
