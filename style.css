@@ -50,17 +50,3 @@ p {
 .main {
   margin-top: 30px; /* Add a top margin to avoid content overlay */
 }
-
-/* TeamPage*/
-#Team.teampage{
-  padding:20px
-}
-#Team.teampage.photo{
-  float: left;
-  width: 20%;
-}
-
-#Team.teampage.descripe{
-  float: left;
-  width: 80%;
-}
