@@ -40,8 +40,8 @@ p {
 
 /* Change background on mouse-over */
 .navbar a:hover {
-  background: mediumseagreen;
-  color:black;
+  background: black;
+  color:white;
   /*color: orange; */
   border-radius: 20px;
 }
