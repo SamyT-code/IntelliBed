@@ -11,13 +11,28 @@
         margin-top: 2cm;
       }
 
+      .button{
+      	background-color: #003366;
+  		border: none;
+  		color: white;
+	    padding: 12px 29px;
+	    text-align: center;
+	    text-decoration: none;
+	    display: inline-block;
+	    font-size: 14px;
+	    font-family:montserrat;
+	    margin: 3px 1px;
+	    cursor: pointer;
+      	border-radius: 22px;
+      }
+
     </style>
     <script type="text/javascript">
-		function queenSwitch() {
-  			document.getElementById("originalTwin").src="BuyPage/white.jpg";
+		function greySwitch() {
+  			document.getElementById("bed").src="BuyPage/grey.png";
   		}
-		function kingSwitch() {
-  			document.getElementById("originalTwin").src="BuyPage/kingwhite.jpg";
+		function whiteSwitch() {
+  			document.getElementById("bed").src="BuyPage/white.png";
   		}
     </script>
 </head>
@@ -36,10 +51,12 @@
 	<i><h1>Buy Page</h1></i>
 	<p>Abduljbbar Salkini</p>
 
-	<img id="originalTwin" src="BuyPage/twinwhite.jpg" alt="Twin White Bed Sheets" width="400" height="400">
+	<img id="bed" src="BuyPage/white.png" alt="White Bed Sheets" width="400" height="400">
+	<br><button class="button" onclick="whiteSwitch()">White</button>
+	<button class="button" onclick="greySwitch()">Grey</button>
+	<br><button class="button">Twin Bed</button>
+	<button class="button">Queen Bed</button>
+	<button class="button">King Bed</button>
 	
-	<button id="Queen" onclick="queenSwitch()">Queen Bed</button>
-	<button id="King" onclick="kingSwitch()">King Bed</button>
-
 </body>
 </html>
