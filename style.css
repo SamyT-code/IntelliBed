@@ -9,9 +9,8 @@ p {
 }
 
 .logo-image{
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
+  width: 200px;
+  height: 50px;
   overflow: hidden;
   margin-top: -6px;
 }
@@ -19,7 +18,7 @@ p {
 /* The navigation bar */
 .navbar {
   overflow: hidden;
-  background-color: dodgerblue;
+  background-color: #003366;
   position: fixed; 
   top: 0; 
   left: 0;
@@ -41,26 +40,14 @@ p {
 
 /* Change background on mouse-over */
 .navbar a:hover {
-  background: blue;
+  background: black;
+  color:white;
   /*color: orange; */
   border-radius: 20px;
 }
 
+
 /* Main content */
 .main {
   margin-top: 30px; /* Add a top margin to avoid content overlay */
-}
-
-/* TeamPage*/
-#Team.teampage{
-  padding:20px
-}
-#Team.teampage.photo{
-  float: left;
-  width: 20%;
-}
-
-#Team.teampage.descripe{
-  float: left;
-  width: 80%;
 }
