@@ -25,6 +25,7 @@
 	      text-decoration: none;
 	      display: inline-block;
 	      font-size: 14px;
+        transition-duration: 0.4s;
 	      font-family:montserrat;
 	      margin: 3px 1px;
 	      cursor: pointer;
@@ -48,19 +49,26 @@
     </style>
     <script type="text/javascript">
 
+      var lastFocusedButton = "twinButton"
+
 		  function greySwitch() {
   			document.getElementById("bed").src="BuyPage/grey.png";
   		}
 		  function whiteSwitch() {
   			document.getElementById("bed").src="BuyPage/white.png";
       }
-      function gotoCheckout() {
-        window.open("CheckoutPage.html", "_self");
-      }
       function updateSize(size) {
-        document.getElementById("currentSize").innerHTML = size
+        updateButtonFocus(size.toLowerCase() + "Button")
+      }
+      function gotoCheckout() {
+        window.location.href = "CheckoutPage.html" + "?" + lastFocusedButton.substring(0, lastFocusedButton.indexOf("Button"));
       }
 
+      function updateButtonFocus(selectedButton) {
+        document.getElementById(lastFocusedButton).style.background = "#003366"
+        lastFocusedButton = selectedButton
+        document.getElementById(lastFocusedButton).style.background = "#000000"
+      }
     </script>
   </head>
   <body>
@@ -89,19 +97,18 @@
     <br>
 
     <div class="bedColorButtons">
-      <button class="button" onclick="whiteSwitch()">White</button>
-      <button class="button" onclick="greySwitch()">Grey</button>
+      <button class="button" id="whiteButton" onclick="whiteSwitch()">White</button>
+      <button class="button" id="greyButton" onclick="greySwitch()">Grey</button>
     </div>
 
     <div class="bedSizeButtons">
-      <button class="button" onclick="updateSize('Twin')">Twin</button>
-      <button class="button" onclick="updateSize('Full')">Full</button>
-	    <button class="button" onclick="updateSize('Queen')">Queen</button>
-	    <button class="button" onclick="updateSize('King')">King</button>
+      <button class="button" id="twinButton" onclick="updateSize('Twin')">Twin</button>
+      <button class="button" id="fullButton" onclick="updateSize('Full')">Full</button>
+	    <button class="button" id="queenButton" onclick="updateSize('Queen')">Queen</button>
+	    <button class="button" id="kingButton" onclick="updateSize('King')">King</button>
     </div>
 
-    <p>Current Bed Size: <span id="currentSize">Twin</span></p>
-
+    <script>updateButtonFocus("twinButton")</script>
 	
   </body>
 </html>

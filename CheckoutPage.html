@@ -80,7 +80,7 @@
       function onClick1() {
           clicks += 1;
           document.getElementById("clicks").innerHTML = clicks;
-      };
+      }
       
       function onClick2() {
       if (clicks > 0) {
@@ -88,11 +88,12 @@
         }
           
           document.getElementById("clicks").innerHTML = clicks;
-      };
+      }
 
-    
+      var queryString = decodeURIComponent(window.location.search);
+      var bedSize = queryString.substring(queryString.indexOf("?") + 1);
 
-      </script>
+    </script>
 
       <div class="boxleft">
           <button class="button"  type="button" onClick="onClick2()">–</button>
@@ -108,7 +109,9 @@
         <p class="checkout">Estimated Taxes..................................$$$</p> <hr>
         <p class="checkout">Product Subtotal : </p>
         <h2>$$$</h2>
-    </div>
+      </div>
+
+      <script>updateBedSize()</script>
 
 
 </body>
