@@ -76,34 +76,51 @@
 
     <script>
 
-      var clicks = 1;
-      function onClick1() {
-          clicks += 1;
-          document.getElementById("clicks").innerHTML = clicks;
-      }
-      
-      function onClick2() {
-      if (clicks > 1) {
-          clicks -= 1;
-        }
-          
-          document.getElementById("clicks").innerHTML = clicks;
+      // BELOW ARE THE PRICES FOR 1 SINGLE INTELLIBED OF IT'S SIZE
+      var twinPrice = 79.99
+      var fullPrice = 89.99
+      var queenPrice = 119.99
+      var kingPrice = 139.99
+
+      var url = decodeURIComponent(window.location.search);
+      var bedSize = url.substring(url.indexOf("?") + 1);
+      if (bedSize.length < 2) {
+        bedSize = "twin"
       }
 
-      var queryString = decodeURIComponent(window.location.search);
-      var bedSize = queryString.substring(queryString.indexOf("?") + 1);
+      var numBeds = 1;
+
+      function updateBedCount(delta) {
+        if (numBeds + delta > 0 && numBeds + delta < 100) {
+          numBeds += delta
+          document.getElementById("numBeds").innerHTML = numBeds;
+        }
+        document.getElementById("cost").innerHTML = getCurrentPrice()
+      }
+
+      function getCurrentPrice() {
+        if (bedSize == "twin") {
+          return (twinPrice * numBeds).toFixed(2)
+        } else if (bedSize == "full") {
+          return (fullPrice * numBeds).toFixed(2)
+        } else if (bedSize == "queen") {
+          return (queenPrice * numBeds).toFixed(2)
+        } else if (bedSize == "king") {
+          return (kingPrice * numBeds).toFixed(2)
+        }
+      }
 
     </script>
 
       <div class="boxleft">
-          <button class="button"  type="button" onClick="onClick2()">–</button>
-          <button class="button"  type="button" onClick="onClick1()">+</button> 
-          <p style="font-size: 26px; background-color: lightgray;">Intellibeds: <a id="clicks">1</a></p>
+          <button class="button" type="button" onclick="updateBedCount(-1)">–</button>
+          <button class="button" type="button" onclick="updateBedCount(+1)">+</button> 
+          <p style="font-size: 26px; background-color: lightgray;">Quantity: <a id="numBeds">1</a></p>
       </div>
 
       <div class="boxright">
         <h2>Order Summary</h4> <br>
-        <p class="checkout">Product Subtotal.................................$$$</p> 
+        <p class="checkout">Product Subtotal: $<span id="cost" >___</span></p> 
         <p class="checkout">Order Discounts.............................-$0.00</p> 
         <p class="checkout">Estimated Shipping...........................Free</p> 
         <p class="checkout">Estimated Taxes..................................$$$</p> <hr>
@@ -111,7 +128,7 @@
         <h2>$$$</h2>
       </div>
 
-      <script>updateBedSize()</script>
+      <script>updateBedCount(0)</script>
 
 
 </body>
