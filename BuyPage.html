@@ -31,22 +31,36 @@
       	border-radius: 22px;
       }
 
+      .checkoutButton{
+        position: relative;
+        top: -190px;
+        padding-left: 50px;
+      }
+
       .bedColorButtons{
         padding-left: 90px;
       }
       
       .bedSizeButtons{
-        padding-left: 15px;
+        padding-left: 20px;
       }
 
     </style>
     <script type="text/javascript">
-		function greySwitch() {
+
+		  function greySwitch() {
   			document.getElementById("bed").src="BuyPage/grey.png";
   		}
-		function whiteSwitch() {
+		  function whiteSwitch() {
   			document.getElementById("bed").src="BuyPage/white.png";
-  		}
+      }
+      function gotoCheckout() {
+        window.open("CheckoutPage.html", "_self");
+      }
+      function updateSize(size) {
+        document.getElementById("currentSize").innerHTML = size
+      }
+
     </script>
   </head>
   <body>
@@ -66,17 +80,28 @@
 
     <br><br><br>
 
-	  <img id="bed" src="BuyPage/white.png" alt="White Bed Sheets" width="400" height="400">
+    <img id="bed" src="BuyPage/white.png" alt="White Bed Sheets" width="400" height="400">
+
+    <span class="checkoutButton">
+      <button class="button" onclick="gotoCheckout()">Proceed to Checkout</button>
+    </span>
+
     <br>
+
     <div class="bedColorButtons">
       <button class="button" onclick="whiteSwitch()">White</button>
       <button class="button" onclick="greySwitch()">Grey</button>
     </div>
+
     <div class="bedSizeButtons">
-      <button class="button">Twin Bed</button>
-	    <button class="button">Queen Bed</button>
-	    <button class="button">King Bed</button>
+      <button class="button" onclick="updateSize('Twin')">Twin</button>
+      <button class="button" onclick="updateSize('Full')">Full</button>
+	    <button class="button" onclick="updateSize('Queen')">Queen</button>
+	    <button class="button" onclick="updateSize('King')">King</button>
     </div>
+
+    <p>Current Bed Size: <span id="currentSize">Twin</span></p>
+
 	
   </body>
 </html>
