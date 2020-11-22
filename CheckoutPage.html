@@ -76,14 +76,14 @@
 
     <script>
 
-      var clicks = 0;
+      var clicks = 1;
       function onClick1() {
           clicks += 1;
           document.getElementById("clicks").innerHTML = clicks;
       }
       
       function onClick2() {
-      if (clicks > 0) {
+      if (clicks > 1) {
           clicks -= 1;
         }
           
@@ -98,7 +98,7 @@
       <div class="boxleft">
           <button class="button"  type="button" onClick="onClick2()">–</button>
           <button class="button"  type="button" onClick="onClick1()">+</button> 
-          <p style="font-size: 26px; background-color: lightgray;">Intellibeds: <a id="clicks">0</a></p>
+          <p style="font-size: 26px; background-color: lightgray;">Intellibeds: <a id="clicks">1</a></p>
       </div>
 
       <div class="boxright">
