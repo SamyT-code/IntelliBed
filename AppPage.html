@@ -13,7 +13,7 @@
     </style>
 </head>
 <body>
-
+  <div class = "main_app">
     <div class="navbar">
         <a href="CheckoutPage.html">Cart</a>
         <a href="language" style="color: red;" title="Do NOT click here" target="_blank" >Language</a>
@@ -22,14 +22,78 @@
         <a href="AppPage.html">App</a>
         <a href="ProductPage.html">Our Product</a>
         <a href="index.html">Home</a>
+
         <div class="logo-image">
           <img src="logo.jpg" class="img-fluid">
-      </div>
+        </div>
     </div>
   <br><br><br>
-    <div class = "AppImageContainer">
-      <img src="IntelliBedApp.jpg" width="460.7" height="614.4">
+
+    <div class = "app_information">
+      <img src="IntelliBedApp.jpg" class="mobile">
+
+      <div id=circle>
+        <div class="feature one">
+          <img src="TempIcon.jpg">
+          <div>
+            <h1>Temperature</h1>
+            <p>Temperature Control via app</p>
+          </div>
+        </div>
+        <div class="feature two">
+          <img src="MassageIcon.jpg">
+          <div>
+            <h1>Massage</h1>
+            <p>Massage control via app</p>
+          </div>
+        </div>
+        <div class="feature three">
+          <img src="SleepIcon.jpg">
+          <div>
+            <h1>Sleep Monitoring</h1>
+            <p>Sleep monitoring via app</p>
+          </div>
+        </div>
+        <div class="feature four">
+          <img src="AlarmIcon.jpg">
+          <div>
+            <h1>Alarm</h1>
+            <p>Alarm control via app</p>
+          </div>
+        </div>
+        <div class="feature five">
+          <img src="HealthIcon.jpg">
+          <div>
+            <h1>Health</h1>
+            <p>Health control via app</p>
+          </div>
+        </div>
+
+      </div>
     </div>
+
+    <div class="controls">
+      <img src="arrow.png" id="upBtn">
+      <h3>App Features</h3>
+      <img src="arrow.png" id="downBtn">
+    </div>
+
+  </div>
+
+  <script>
+    var circle = document.getElementByID("circle");
+    var upBtn = document.getElementByID("upBtn");
+    var downBtn = document.getElementByID("downBtn");
+
+    var rotateValue = circle.style.transform;
+    var rotateSum;
+
+    upBtn.onclick = function(){
+      rotateSum = rotateValue + "rotate(-90deg)";
+      circle.style.transform = rotateSum;
+      rotateValue = rotateSum;
+    }
+  </script>
 
 </body>
 </html>
