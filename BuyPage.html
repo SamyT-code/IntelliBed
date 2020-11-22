@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <link rel="icon" href="TeamPage/moon.PNG">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Buy Page</title>
+
     <link rel="stylesheet" href="style.css">
     <style>
       h1{
@@ -13,53 +17,98 @@
 
       .button{
       	background-color: #003366;
-  		border: none;
-  		outline: none;
-  		color: white;
-	    padding: 12px 29px;
-	    text-align: center;
-	    text-decoration: none;
-	    display: inline-block;
-	    font-size: 14px;
-	    font-family:montserrat;
-	    margin: 3px 1px;
-	    cursor: pointer;
+  		  border: none;
+  		  outline: none;
+  		  color: white;
+	      padding: 12px 29px;
+	      text-align: center;
+	      text-decoration: none;
+	      display: inline-block;
+	      font-size: 14px;
+        transition-duration: 0.4s;
+	      font-family:montserrat;
+	      margin: 3px 1px;
+	      cursor: pointer;
       	border-radius: 22px;
+      }
+
+      .checkoutButton{
+        position: relative;
+        top: -190px;
+        padding-left: 50px;
+      }
+
+      .bedColorButtons{
+        padding-left: 90px;
+      }
+      
+      .bedSizeButtons{
+        padding-left: 20px;
       }
 
     </style>
     <script type="text/javascript">
-		function greySwitch() {
+
+      var lastFocusedButton = "twinButton"
+
+		  function greySwitch() {
   			document.getElementById("bed").src="BuyPage/grey.png";
   		}
-		function whiteSwitch() {
+		  function whiteSwitch() {
   			document.getElementById("bed").src="BuyPage/white.png";
-  		}
+      }
+      function updateSize(size) {
+        updateButtonFocus(size.toLowerCase() + "Button")
+      }
+      function gotoCheckout() {
+        window.location.href = "CheckoutPage.html" + "?" + lastFocusedButton.substring(0, lastFocusedButton.indexOf("Button"));
+      }
+
+      function updateButtonFocus(selectedButton) {
+        document.getElementById(lastFocusedButton).style.background = "#003366"
+        lastFocusedButton = selectedButton
+        document.getElementById(lastFocusedButton).style.background = "#000000"
+      }
     </script>
-</head>
-<body>
+  </head>
+  <body>
 
     <div class="navbar">
-        <a href="CheckoutPage.html">Cart</a>
-        <a href="language" style="color: red;" title="Do NOT click here" target="_blank" >Language</a>
-        <a href="BuyPage.html">Buy Now</a>
-        <a href="TeamPage.html">Our Team</a>
-        <a href="AppPage.html">App</a>
-        <a href="ProductPage.html">Our Product</a>
-        <a href="index.html">Home</a>
-        <div class="logo-image">
-          <img src="logo.jpg" class="img-fluid">
+      <a href="CheckoutPage.html">Cart</a>
+      <a href="language" style="color: red;" title="Do NOT click here" target="_blank" >Language</a>
+      <a href="BuyPage.html">Buy Now</a>
+      <a href="TeamPage.html">Our Team</a>
+      <a href="AppPage.html">App</a>
+      <a href="ProductPage.html">Our Product</a>
+      <a href="index.html">Home</a>
+      <div class="logo-image">
+        <img src="logo.jpg" class="img-fluid">
       </div>
     </div>
 
-	<p>Abduljbbar Salkini</p>
-<br><br>
-	<img id="bed" src="BuyPage/white.png" alt="White Bed Sheets" width="400" height="400">
-	<br><button class="button" onclick="whiteSwitch()">White</button>
-	<button class="button" onclick="greySwitch()">Grey</button>
-	<br><button class="button">Twin Bed</button>
-	<button class="button">Queen Bed</button>
-	<button class="button">King Bed</button>
+    <br><br><br>
+
+    <img id="bed" src="BuyPage/white.png" alt="White Bed Sheets" width="400" height="400">
+
+    <span class="checkoutButton">
+      <button class="button" onclick="gotoCheckout()">Proceed to Checkout</button>
+    </span>
+
+    <br>
+
+    <div class="bedColorButtons">
+      <button class="button" id="whiteButton" onclick="whiteSwitch()">White</button>
+      <button class="button" id="greyButton" onclick="greySwitch()">Grey</button>
+    </div>
+
+    <div class="bedSizeButtons">
+      <button class="button" id="twinButton" onclick="updateSize('Twin')">Twin</button>
+      <button class="button" id="fullButton" onclick="updateSize('Full')">Full</button>
+	    <button class="button" id="queenButton" onclick="updateSize('Queen')">Queen</button>
+	    <button class="button" id="kingButton" onclick="updateSize('King')">King</button>
+    </div>
+
+    <script>updateButtonFocus("twinButton")</script>
 	
-</body>
+  </body>
 </html>

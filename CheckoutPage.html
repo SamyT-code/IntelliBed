@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <link rel="icon" href="TeamPage/moon.PNG">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout Page</title>
@@ -73,28 +76,29 @@
 
     <script>
 
-      var clicks = 0;
+      var clicks = 1;
       function onClick1() {
           clicks += 1;
           document.getElementById("clicks").innerHTML = clicks;
-      };
+      }
       
       function onClick2() {
-      if (clicks > 0) {
+      if (clicks > 1) {
           clicks -= 1;
         }
           
           document.getElementById("clicks").innerHTML = clicks;
-      };
+      }
 
-    
+      var queryString = decodeURIComponent(window.location.search);
+      var bedSize = queryString.substring(queryString.indexOf("?") + 1);
 
-      </script>
+    </script>
 
       <div class="boxleft">
           <button class="button"  type="button" onClick="onClick2()">–</button>
           <button class="button"  type="button" onClick="onClick1()">+</button> 
-          <p style="font-size: 26px; background-color: lightgray;">Intellibeds: <a id="clicks">0</a></p>
+          <p style="font-size: 26px; background-color: lightgray;">Intellibeds: <a id="clicks">1</a></p>
       </div>
 
       <div class="boxright">
@@ -105,7 +109,9 @@
         <p class="checkout">Estimated Taxes..................................$$$</p> <hr>
         <p class="checkout">Product Subtotal : </p>
         <h2>$$$</h2>
-    </div>
+      </div>
+
+      <script>updateBedSize()</script>
 
 
 </body>
