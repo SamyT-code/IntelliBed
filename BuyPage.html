@@ -14,36 +14,63 @@
         text-align: center;
         margin-top: 2cm;
       }
+      body{
+      	background-color: lightblue;
+      }
+      .p2{
+      	font-size: 40px;
+      }
+      .specs{
+      	position: relative;
+        top: 100px;
+        left:800px;
+      	width:500px;
+      }
+    	
+      .IntelliBed{
+      	margin-top: 30px;
+      	margin-right: 370px;
+      	float:right;
+      }
+      .cool{
+      	position: relative;
+        top: -130px;
+        left:50px;
+      	border: 7px solid #003366;
+      	float: left;
 
+      }
       .button{
       	background-color: #003366;
-  		  border: none;
-  		  outline: none;
-  		  color: white;
-	      padding: 12px 29px;
-	      text-align: center;
-	      text-decoration: none;
-	      display: inline-block;
-	      font-size: 14px;
+  		border: none;
+  		outline: none;
+  		color: white;
+	    padding: 12px 29px;
+	    text-align: center;
+	    text-decoration: none;
+	    display: inline-block;
+	    font-size: 20px;
         transition-duration: 0.4s;
-	      font-family:montserrat;
-	      margin: 3px 1px;
-	      cursor: pointer;
-      	border-radius: 22px;
+	    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	    cursor: pointer;
+      	border-radius: 10px;
+
       }
 
       .checkoutButton{
         position: relative;
-        top: -190px;
-        padding-left: 50px;
+        top: 350px;
+        left: 220px;
+        padding-left: 90px;
+        
       }
 
-      .bedColorButtons{
-        padding-left: 90px;
-      }
       
       .bedSizeButtons{
-        padding-left: 20px;
+      	position: relative;
+      	top: 200px;
+      	left: 220px;
+        
       }
 
     </style>
@@ -51,12 +78,26 @@
 
       var lastFocusedButton = "twinButton"
 
-		  function greySwitch() {
-  			document.getElementById("bed").src="BuyPage/grey.png";
-  		}
-		  function whiteSwitch() {
-  			document.getElementById("bed").src="BuyPage/white.png";
+		  function twinSwitch() {
+  			document.getElementById("bed").src="BuyPage/twin1.png";
+  	  }
+		  function fullSwitch() {
+  			document.getElementById("bed").src="BuyPage/full1.png";
       }
+      	  function queenSwitch() {
+  			document.getElementById("bed").src="BuyPage/queen1.png";
+  	  }
+		  function kingSwitch() {
+  			document.getElementById("bed").src="BuyPage/king1.png";
+      }
+
+      // Image sources: IKEA CANADA
+      // TWIN BED: https://www.ikea.com/ca/en/p/malm-bed-frame-high-black-brown-luroey-s69009951/
+      // FULL BED: https://www.ikea.com/ca/en/p/songesand-bed-frame-brown-luroey-s19241066/
+      // QUEEN BED: https://www.ikea.com/ca/en/p/kvalfjord-bed-frame-sandbacka-dark-gray-luroey-s59291667/
+      // KING BED: https://www.ikea.com/ca/en/p/vadheim-upholstered-bed-frame-gunnared-light-green-10465678/
+      
+
       function updateSize(size) {
         updateButtonFocus(size.toLowerCase() + "Button")
       }
@@ -88,7 +129,17 @@
 
     <br><br><br>
 
-    <img id="bed" src="BuyPage/white.png" alt="White Bed Sheets" width="400" height="400">
+    
+    <h1 class="IntelliBed">IntelliBed™</h1>
+    
+    <div  class="specs">
+    	<p2 style="font-size:20px;">The official IntelliBed, the new age of sleep. <br><br>This product comes in different sizes including: Twin, Full, Queen, and King. <br><br> Note: Queen and King IntelliBed sizes allow for each half of the bed to be controlled independently.</p2>
+    </div>
+    
+
+    
+
+    <img class="cool" id="bed" src="BuyPage/twin1.png" alt="Twin Bed" width="600" height="600">
 
     <span class="checkoutButton">
       <button class="button" onclick="gotoCheckout()">Proceed to Checkout</button>
@@ -96,16 +147,16 @@
 
     <br>
 
-    <div class="bedColorButtons">
-      <button class="button" id="whiteButton" onclick="whiteSwitch()">White</button>
-      <button class="button" id="greyButton" onclick="greySwitch()">Grey</button>
-    </div>
+    
+      <!-- <button class="button" id="whiteButton" onclick="whiteSwitch()">White</button>
+      <button class="button" id="greyButton" onclick="greySwitch()">Grey</button> -->
 
-    <div class="bedSizeButtons">
-      <button class="button" id="twinButton" onclick="updateSize('Twin')">Twin</button>
-      <button class="button" id="fullButton" onclick="updateSize('Full')">Full</button>
-	    <button class="button" id="queenButton" onclick="updateSize('Queen')">Queen</button>
-	    <button class="button" id="kingButton" onclick="updateSize('King')">King</button>
+
+    <div class="bedSizeButtons" style="max-width: 75%">
+      <button class="button" id="twinButton" onclick="updateSize('Twin');twinSwitch()">Twin</button>
+      <button class="button" id="fullButton" onclick="updateSize('Full');fullSwitch()">Full</button>
+	  <button class="button" id="queenButton" onclick="updateSize('Queen');queenSwitch()">Queen</button>
+	  <button class="button" id="kingButton" onclick="updateSize('King');kingSwitch()">King</button>
     </div>
 
     <script>updateButtonFocus("twinButton")</script>
