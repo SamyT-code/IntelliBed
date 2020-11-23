@@ -14,9 +14,8 @@
       height:fit-content;
       border: 2px;
       padding: 1px;
+      box-sizing: border-box;
     }
-
-   
 
     .column {
       float: left;
@@ -24,6 +23,7 @@
       margin-bottom: 16px;
       padding: 0 10px;
       display: inline;
+      display: block;
     }
     *, *, *:before, *,*:after {
     box-sizing: border-box;
@@ -44,13 +44,25 @@
     .container {
       padding: 0 16px;
     }
+    .button {
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: rgb(11, 5, 66);
+    text-align: center;
+    width: 100%;
+    }
+    .button:hover {
+      background-color: black;
 
-    .container::after, .row::after {
-    content:attr(20);
-    clear: both;
-    display: inline;;
-}
-
+    }
+    body{
+      background: lightblue;
+    }
+    p {
+      width:fit-content;
+      height: fit-content;
+    }
   </style>
 </head>
 
@@ -69,8 +81,10 @@
     </div>
   </div>
 
-  <h1><i> </i></h1>
+  <br>
 
+  <h1><i> </i></h1>
+  <br>
   <div class="row">
     <div class="column">
       <div class="card">
@@ -82,7 +96,7 @@
             class project. I would like to further my knowledge in this field during my coop work terms. If you think I
             am a good fit for your workplace, my first CO-OP term is summer 2021."</p>
           <p>Email:jluij043@uottawa.ca</p>
-          <h1><a href="https://www.linkedin.com/in/jack-kuijpers-b2bb851b9/" target="_blank">Jack Kuijpers</a></h1>
+          <h1><a href="https://www.linkedin.com/in/jack-kuijpers-b2bb851b9/" ><button class="button">Jack Kuijpers</h1>
           <p></p>
           <a href="mailto:jluij043@uottawa.ca"><img src="TeamPage/emaillog.png" alt="email me" /></a>
           <!--logos form https://www.google.com/search?q=email+icon&tbm=isch&ved=2ahUKEwi6teTostDsAhUDUawKHerwCWQQ2-cCegQIABAA&oq=email+&gs_lcp=CgNpbWcQARgBMgcIABCxAxBDMgcIABCxAxBDMgQIABBDMgQIABBDMgQIABBDMgQIABBDMgQIABBDMgQIABBDMgQIABBDMgQIABBDOgQIIxAnOgIIADoICAAQsQMQgwE6BQgAELEDUNSZE1jyohNg2a8TaABwAHgAgAFhiAGGBJIBATaYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=FseVX7rSJoOisQXq4aegBg&bih=1214&biw=1556&rlz=1C5CHFA_enCA909CA909-->
@@ -105,8 +119,8 @@
             I've always wanted to know what happens at a real job and what tasks do software developers handle, that
             until I had an internship at LEPTIS Technologies."</p>
           <p>Email:asalk025@uottawa.ca</p>
-          <h1><a href="https://www.linkedin.com/in/abduljabbar-salkini-8763ab1ba/" target="_blank">Abduljabbar
-              Salkini</a></h1>
+          <h1><a href="https://www.linkedin.com/in/abduljabbar-salkini-8763ab1ba/" ><button class="button">Abduljabbar
+              Salkini</h1>
           <p></p>
           <p>
             <a href="mailto:asalk025@uottawa.ca"><img src="TeamPage/emaillog.png" alt="email me" /></a>
@@ -116,6 +130,7 @@
       </div>
     </div>
   </div>
+
 
   <div class="row">
     <div class="column">
@@ -130,7 +145,7 @@
             students to follow.
             If you are hiring students for Summer 2021 please let me know! "</p>
           <p>Email:stoua026@uottawa.ca</p>
-          <h1><a href="https://www.linkedin.com/in/samy-touabi-3013b11ba" target="_blank">Samy Touabi</a></h1>
+          <h1><a href="https://www.linkedin.com/in/samy-touabi-3013b11ba" ><button class="button">Samy Touabi</h1>
           <p></p>
           <p>
             <a href="mailto:stoua026@uottawa.ca"><img src="TeamPage/emaillog.png" alt="email me" /></a>
@@ -153,7 +168,7 @@
             which is why I'm looking for opportunities to help me learn and grow as a software engineer. Please feel
             free to reach out with any student opportunities that can help me in my journey. "</p>
           <p>Email:oturc030@uottawa.ca</p>
-          <h1><a href="https://www.linkedin.com/in/oleksander-turchyn/" target="_blank">Oleksander Turchyn</a></h1>
+          <h1><a href="https://www.linkedin.com/in/oleksander-turchyn/" ><button class="button">Oleksander Turchyn</h1>
           <p></p>
           <p>
             <a href="mailto:oturc030@uottawa.ca"><img src="TeamPage/emaillog.png" alt="email me" /></a>
@@ -174,14 +189,14 @@
             completed a bachelor of science degree with my honours in chemistry.
 
             During my degree in science, I've noticed that a vast majority of future chemistry applications is in
-            programming and software engineering. I developed an interested and I am now pursuing that interest.
+            programming and software engineering. 
 
             I had a brief experience in the application of programming when I was completing my thesis in a physical
             chemistry lab. I was required to transform and analyze lab data.
 
             I would love to gain more experience through co-op placements. "</p>
           <p>Email:swang228@uottawa.ca</p>
-          <h1><a href="https://www.linkedin.com/in/sihan-wang-b771b81ba/" target="_blank">Sihan Wang</a></h1>
+          <h1><a href="https://www.linkedin.com/in/sihan-wang-b771b81ba/" ><button class="button">Sihan Wang</h1>
           <p></p>
           <p>
             <a href="mailto:swang228@uottawa.ca"><img src="TeamPage/emaillog.png" alt="email me" /></a>
@@ -202,7 +217,7 @@
 
             This summer, I'm looking for a co-op placement to gain some experience in the field of software development. Please let me know if you would like to help make this process easier for me!"</p>
           <p>Email:mwhit176@uottawa.ca</p>
-          <h1><a href="https://www.linkedin.com/in/matt-white-4a754a1ba/" target="_blank">Matt White</a></h1>
+          <h1><a href="https://www.linkedin.com/in/matt-white-4a754a1ba/" ><button class="button">Matt White</h1>
           <p></p>
           <p>
             <a href="mailto:mwhit176@uottawa.ca"><img src="TeamPage/emaillog.png" alt="email me" /></a>
