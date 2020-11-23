@@ -23,6 +23,7 @@
           outline: none;
           color: white;
           padding: 10px 30px 10px 30px;
+          width:80px;
           position: relative;
           left: -15px;
           text-align: center;
@@ -34,6 +35,26 @@
           border-radius: 10%;
       }
 
+      .bigbutton {
+        background-color: #003366; /* Green #003366 */
+        border: none;
+        outline: none;
+        color: white;
+        padding: 0px;
+        height: 200px;
+        width: 700px;
+        position: relative;
+        right: -90px;
+        bottom: -400px;
+        white-space: nowrap;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 42px;
+        margin: 2px 2px;
+        cursor: pointer;
+        border-radius: 1%;
+      }
       .boxleft {
         background-color: #479ae6;
         width: 700px;
@@ -52,6 +73,7 @@
         margin: 10px;
         position: absolute;
         right: 1cm;
+        top: 2cm;
         text-align: center;
         /* border-radius: 15%; */
       }
@@ -131,15 +153,19 @@
         }
         if (sizeId == 0) {
           bedSize = "twin";
+          document.getElementById("bedImg").src = "BuyPage/twin1.png";
           document.getElementById("size").innerHTML = "Twin";
         } else if (sizeId == 1) {
           bedSize = "full";
+          document.getElementById("bedImg").src = "BuyPage/full1.png";
           document.getElementById("size").innerHTML = "Full";
         } else if (sizeId == 2) {
           bedSize = "queen";
+          document.getElementById("bedImg").src = "BuyPage/queen1.png";
           document.getElementById("size").innerHTML = "Queen";
         } else if (sizeId == 3) {
           bedSize = "king";
+          document.getElementById("bedImg").src = "BuyPage/king1.png";
           document.getElementById("size").innerHTML = "King";
         }
         updateBedCount(0);
@@ -163,29 +189,33 @@
 
     </script>
 
-      <div class="boxleft">
-        <img src="TeamPage/nightsky.jfif" alt="Sorry unable to load"style="float:right; width:512;height:256px;">
-        <p class="pleftbox" style="font-size: 26px; ">Quantity: <a id="numBeds">1</a></p>
-        <button class="button" type="button" onclick="updateBedCount(-1)">–</button>
-        <button class="button" type="button" onclick="updateBedCount(+1)">+</button>
+    <div class="boxleft">
+        
+      <img id="bedImg" src="TeamPage/nightsky.jfif" alt="Unable to load image" style="position:relative; left:-50px; float:right; width:384px; height:256px;">
 
-        <p class="pleftbox" style="font-size: 26px; ">Size: <a id="size">Twin</a></p>
-        <button class="button" type="button" onclick="updateBedSize(-1)">←</button>
-        <button class="button" type="button" onclick="updateBedSize(+1)">→</button>
-      </div>
+      <p class="pleftbox" style="font-size: 26px; ">&nbsp;Quantity: <a id="numBeds">1</a></p>
+      <button class="button" type="button" onclick="updateBedCount(-1)">–</button>
+      <button class="button" type="button" onclick="updateBedCount(+1)">+</button>
 
-      <div class="boxright">
-        <h2>Order Summary</h4> <br>
-        <p class="checkout">Product Subtotal: $<span id="cost" >___</span></p>
-        <p class="checkout">Order Discounts: -$0.00</p>
-        <p class="checkout">Estimated Shipping: Free</p>
-        <p class="checkout">Estimated Taxes: $<span id="tax" >___</span></p>
-        <hr>
-        <p class="checkout">Total Price: </p>
-        <h2>$<span id="tot">___</span></h2>
-      </div>
+      <p class="pleftbox" style="font-size: 26px; ">&nbsp;&nbsp;Size: <a id="size">Twin</a></p>
+      <button class="button" type="button" onclick="updateBedSize(-1)">←</button>
+      <button class="button" type="button" onclick="updateBedSize(+1)">→</button>
+    </div>
 
-      <script>updateBedCount(0); updateBedSize(0);</script>
+    <div class="boxright">
+      <h2>Order Summary</h4> <br>
+      <p class="checkout">Product Subtotal: $<span id="cost" >___</span></p>
+      <p class="checkout">Order Discounts: -$0.00</p>
+      <p class="checkout">Estimated Shipping: Free</p>
+      <p class="checkout">Estimated Taxes: $<span id="tax" >___</span></p>
+      <hr>
+      <p class="checkout">Total Price: </p>
+      <h2>$<span id="tot">___</span></h2>
+    </div>
+
+    <button class="bigbutton" type="button" onclick="alert('Thank you for your purchase!');">BUY NOW!</button>
+      
+    <script>updateBedCount(0); updateBedSize(0);</script>
 
 
 </body>
