@@ -18,7 +18,7 @@
       }
 
       .button {
-          background-color: blue; /* Green */
+          background-color: #003366; /* Green #003366 */
           border: none;
           outline: none;
           color: white;
@@ -35,9 +35,9 @@
       }
 
       .boxleft {
-        background-color: lightgrey;
+        background-color: #479ae6;
         width: 700px;
-        border: 2px solid blue;
+        border: 2px solid #003366;
         padding: 50px;
         margin: 20px;
         position: absolute;
@@ -45,18 +45,27 @@
       }
 
       .boxright {
-        background-color: lightblue;
+        background-color: #479ae6;
         width: 400px;
-        border: 2px solid blue;
+        border: 2px solid #003366;
         padding: 30px;
         margin: 10px;
         position: absolute;
         right: 1cm;
+        text-align: center;
+        /* border-radius: 15%; */
       }
 
       .checkout {
         font-size: 24px;
         background-color: lightblue;
+        border-radius: 48%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      .pleftbox{
+        background-color: #479ae6;
       }
 
     </style>
@@ -155,13 +164,14 @@
     </script>
 
       <div class="boxleft">
-        <p style="font-size: 26px; background-color: lightgray;">Quantity: <a id="numBeds">1</a></p>
+        <img src="TeamPage/nightsky.jfif" alt="Sorry unable to load"style="float:right; width:512;height:256px;">
+        <p class="pleftbox" style="font-size: 26px; ">Quantity: <a id="numBeds">1</a></p>
         <button class="button" type="button" onclick="updateBedCount(-1)">–</button>
         <button class="button" type="button" onclick="updateBedCount(+1)">+</button>
 
-        <p style="font-size: 26px; background-color: lightgray;">Size: <a id="size">Twin</a></p>
-        <button class="button" type="button" onclick="updateBedSize(-1)">–</button>
-        <button class="button" type="button" onclick="updateBedSize(+1)">+</button>
+        <p class="pleftbox" style="font-size: 26px; ">Size: <a id="size">Twin</a></p>
+        <button class="button" type="button" onclick="updateBedSize(-1)">←</button>
+        <button class="button" type="button" onclick="updateBedSize(+1)">→</button>
       </div>
 
       <div class="boxright">
