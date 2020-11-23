@@ -19,14 +19,16 @@
           border: none;
           outline: none;
           color: white;
-          padding: 10px;
+          padding: 10px 30px 10px 30px;
+          position: relative;
+          left: -15px;
           text-align: center;
           text-decoration: none;
           display: inline-block;
           font-size: 16px;
           margin: 2px 2px;
           cursor: pointer;
-          border-radius: 50%;
+          border-radius: 10%;
       }
 
       .boxleft {
@@ -95,40 +97,82 @@
           numBeds += delta
           document.getElementById("numBeds").innerHTML = numBeds;
         }
-        document.getElementById("cost").innerHTML = getCurrentPrice()
+        curTot = getCurrentPrice()
+        document.getElementById("cost").innerHTML = curTot
+        document.getElementById("tax").innerHTML = calculateTax(curTot)
+        document.getElementById("tot").innerHTML = (parseFloat(curTot) + parseFloat(calculateTax(curTot))).toFixed(2)
+      }
+
+      function updateBedSize(delta) {
+        var sizeId;
+        if (bedSize == "twin") {
+          sizeId = 0;
+        } else if (bedSize == "full") {
+          sizeId = 1;
+        } else if (bedSize == "queen") {
+          sizeId = 2;
+        } else if (bedSize == "king") {
+          sizeId = 3;
+        }
+        if (sizeId + delta >= 0 && sizeId + delta <= 3) {
+          sizeId += delta;
+        }
+        if (sizeId == 0) {
+          bedSize = "twin";
+          document.getElementById("size").innerHTML = "Twin";
+        } else if (sizeId == 1) {
+          bedSize = "full";
+          document.getElementById("size").innerHTML = "Full";
+        } else if (sizeId == 2) {
+          bedSize = "queen";
+          document.getElementById("size").innerHTML = "Queen";
+        } else if (sizeId == 3) {
+          bedSize = "king";
+          document.getElementById("size").innerHTML = "King";
+        }
+        updateBedCount(0);
       }
 
       function getCurrentPrice() {
         if (bedSize == "twin") {
-          return (twinPrice * numBeds).toFixed(2)
+          return (twinPrice * numBeds).toFixed(2);
         } else if (bedSize == "full") {
-          return (fullPrice * numBeds).toFixed(2)
+          return (fullPrice * numBeds).toFixed(2);
         } else if (bedSize == "queen") {
-          return (queenPrice * numBeds).toFixed(2)
+          return (queenPrice * numBeds).toFixed(2);
         } else if (bedSize == "king") {
-          return (kingPrice * numBeds).toFixed(2)
+          return (kingPrice * numBeds).toFixed(2);
         }
+      }
+
+      function calculateTax(total) {
+        return (total * 0.15).toFixed(2);
       }
 
     </script>
 
       <div class="boxleft">
-          <button class="button" type="button" onclick="updateBedCount(-1)">–</button>
-          <button class="button" type="button" onclick="updateBedCount(+1)">+</button> 
-          <p style="font-size: 26px; background-color: lightgray;">Quantity: <a id="numBeds">1</a></p>
+        <p style="font-size: 26px; background-color: lightgray;">Quantity: <a id="numBeds">1</a></p>
+        <button class="button" type="button" onclick="updateBedCount(-1)">–</button>
+        <button class="button" type="button" onclick="updateBedCount(+1)">+</button>
+
+        <p style="font-size: 26px; background-color: lightgray;">Size: <a id="size">Twin</a></p>
+        <button class="button" type="button" onclick="updateBedSize(-1)">–</button>
+        <button class="button" type="button" onclick="updateBedSize(+1)">+</button>
       </div>
 
       <div class="boxright">
         <h2>Order Summary</h4> <br>
-        <p class="checkout">Product Subtotal: $<span id="cost" >___</span></p> 
-        <p class="checkout">Order Discounts.............................-$0.00</p> 
-        <p class="checkout">Estimated Shipping...........................Free</p> 
-        <p class="checkout">Estimated Taxes..................................$$$</p> <hr>
-        <p class="checkout">Product Subtotal : </p>
-        <h2>$$$</h2>
+        <p class="checkout">Product Subtotal: $<span id="cost" >___</span></p>
+        <p class="checkout">Order Discounts: -$0.00</p>
+        <p class="checkout">Estimated Shipping: Free</p>
+        <p class="checkout">Estimated Taxes: $<span id="tax" >___</span></p>
+        <hr>
+        <p class="checkout">Total Price: </p>
+        <h2>$<span id="tot">___</span></h2>
       </div>
 
-      <script>updateBedCount(0)</script>
+      <script>updateBedCount(0); updateBedSize(0);</script>
 
 
 </body>
