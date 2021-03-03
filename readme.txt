@@ -1,3 +1,5 @@
+Link to the website: https://seg-intellibed.github.io/IntelliBed/index.html
+
 Name of organization : IntelliBed
 Link to repository : https://github.com/SEG-IntelliBed/IntelliBed
 Link to Github : https://seg-intellibed.github.io/IntelliBed/
